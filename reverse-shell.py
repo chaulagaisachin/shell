@@ -26,7 +26,7 @@ def connect():
             break
         else:
             conn.send(command.encode())
-            print(conn.recv(1024).decode)
+            print(conn.recv(1024).decode())
 def main():
     connect()
 
